@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DonateTokenBank",
+						"name": "_donateTokenBank",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TokenTransfer.sol": "TokenTransfer"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DonateTokenBank.sol": {
+			"keccak256": "0x1ba45a7f48ab6380f8ac173e614276ba7745a9c99a7b9b5baab2bba53dcf8752",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://260ff6ead8d943312af68dd33473d32505f6df1b1870af29dfe3df92f28b94e9",
+				"dweb:/ipfs/QmXcTC4pWoygikELSCm9q7Gth7up61jkiFVNvWvhqHfSvc"
+			]
+		},
+		"contracts/TokenTransfer.sol": {
+			"keccak256": "0x50b7690cd4ab4d5bade7cef8ec6aca18b1807bb7f759ae6cf009f915372ffd75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd1a4692a24768588f205d3190a47e9bd34c3d74e8a7661d90e88b85cb43c88e",
+				"dweb:/ipfs/QmWiKkpNa9YAbtVvYk2aiPCegTdbd48kFRc9ZmoYg19kF3"
+			]
+		}
+	},
+	"version": 1
+}
