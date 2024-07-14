@@ -1,0 +1,15 @@
+.BeneficiaryBox {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  border: 1px solid #878787;
+  border-radius: 20px;
+}
+
+.BeneficiaryBox img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #878787;
+}

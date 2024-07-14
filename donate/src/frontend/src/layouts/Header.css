@@ -1,0 +1,43 @@
+.Header {
+  padding: 10px 0px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.Header .header_shortcut {
+  display: flex;
+  padding: 8px 0px;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.Header .hearder_entire {
+  display: flex;
+  align-items: center;
+}
+
+.Header .hearder_entire .header_left {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.Header .hearder_entire .header_left .header_DoNate_title {
+  font-size: 45px;
+  color: #fea801;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.Header .hearder_entire .header_left .header_DoNate_logo {
+  width: 80px;
+  height: 80px;
+}
+
+.Header .hearder_entire .header_right {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
