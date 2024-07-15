@@ -4,62 +4,83 @@ pragma solidity ^0.8.0;
 import "./DonateTokenBank.sol";
 
 contract TokenTransfer {
-    DonateTokenBank private donateTokenBank;
-    address private donateTokenBankAddress;
+    DonateTokenBank private donate_token_bank;  // Smart Contract 주소
+    address public donate_token_bank_address;   // 토큰을 가진 Donate 계좌 주소
+    bool[3] private isTransferSuccessful;    // 각 단계의 토큰 전송 성공 여부 리스트
 
-    constructor(DonateTokenBank _donateTokenBank) {
-        donateTokenBank = _donateTokenBank;
-        donateTokenBankAddress = address(_donateTokenBank);
+    constructor(DonateTokenBank _donate_token_bank) {
+        isTransferSuccessful = [false, false, false];
+        donate_token_bank = _donate_token_bank;
+        donate_token_bank_address = _donate_token_bank.owner();
     }
 
 /*
-    Function name: sendTokensFromDonate
-    Summary: 토큰을 전송하는 함수 (DonateBank => donator)
-    parameter: 총 2개
+    Function name: TransferTrigger
+    Summary: 토큰 전송 총괄 함수. 차례로 세 개의 토큰 전송 함수를 호출함.
+    parameter: 총 3개
         address donator; 기부자 주소
+        address beneficiary; 수혜자 주소
         uint256 amount; 전송할 토큰량
     Return: 성공 여부 변수
     Caller: 없음
-    Date: 2024.07.11
+    Date: 2024.07.13
     Write by: 심민서
 */
-    function sendTokensFromDonate(address donator, uint256 amount) public returns (bool success){
-        require(donateTokenBank.balances(msg.sender) >= amount);
-        donateTokenBank.transfer(donator, amount);
-        return true;
+    function TransferTrigger(address donator, address beneficiary, uint256 amount) public returns (bool success){
+        sendTokensToDonator(donator, amount);
+        sendTokensToBenificiary(donator, beneficiary, amount);
+        sendTokensToDonateBank(beneficiary, amount);
+        return isTransferSuccessful[2];
+    }
+
+/*
+    Function name: sendTokensToDonator
+    Summary: 토큰 전송 함수 (DonateTokenBank => donator)
+    parameter: 총 2개
+        address donator; 기부자 주소
+        uint256 amount; 전송할 토큰량
+    Return: 없음
+    Caller: TransferTrigger
+    Date: 2024.07.13
+    Write by: 심민서
+*/
+    function sendTokensToDonator(address donator, uint256 amount) public {
+        donate_token_bank.transfer(donate_token_bank_address, donator, amount);
+        isTransferSuccessful[0] = true;
     }
 
 /*
     Function name: sendTokensTobenificiary
-    Summary: 토큰을 전송하는 함수 (donator => benificiary)
-    parameter: 총 2개
+    Summary: 토큰 전송 함수 (donator => beneficiary)
+    parameter: 총 3개
+        address donator; 기부자 주소
         address benificiary; 수혜자 주소
         uint256 amount; 전송할 토큰량
-    Return: 성공 여부 변수
-    Caller: 없음
-    Date: 2024.07.11
+    Return: 없음
+    Caller: TransferTrigger
+    Date: 2024.07.13
     Write by: 심민서
 */
-    function sendTokensToBenificiary(address benificiary, uint256 amount) public returns (bool success){
-        require(donateTokenBank.balances(msg.sender) >= amount);
-        donateTokenBank.transfer(benificiary, amount);
-        return true;
+    function sendTokensToBenificiary(address donator, address beneficiary, uint256 amount) public {
+        require(isTransferSuccessful[0], "Donor did not receive tokens.");
+        donate_token_bank.transfer(donator, beneficiary, amount);
+        isTransferSuccessful[1] = true;
     }
 
 /*
-    Function name: sendTokensToBank
-    Summary: 토큰을 전송하는 함수 (beneficiary => DonateBank)
-    parameter: 총 1개
+    Function name: sendTokensToDonate
+    Summary: 토큰 전송 함수 (beneficiary => DonateBank)
+    parameter: 총 2개
+        address beneficiary; 수혜자 주소
         uint256 amount; 전송할 토큰량
-    Return: 성공 여부 변수
-    Caller: 없음
-    Date: 2024.07.11
+    Return: 없음
+    Caller: TransferTrigger
+    Date: 2024.07.13
     Write by: 심민서
 */
-    function sendTokensToBank(uint256 amount) public returns (bool success){
-        require(donateTokenBank.balances(msg.sender) >= amount);
-        donateTokenBank.transfer(donateTokenBankAddress, amount);
-        return true;
+    function sendTokensToDonateBank(address beneficiary, uint256 amount) public {
+        require(isTransferSuccessful[1], "beneficiary did not receive tokens.");
+        donate_token_bank.transfer(beneficiary, donate_token_bank_address, amount);
+        isTransferSuccessful[2] = true;
     }
-
 }

@@ -5,12 +5,11 @@ contract DonateTokenBank {
     mapping(address => uint256) public balances;
     uint256 public _initialSupply = 1000000;
     uint256 public totalSupply; // 토큰 총 발행량
-    address public owner;
+    address public owner = msg.sender;
 
     constructor() {
         totalSupply = _initialSupply;
-        balances[msg.sender] = _initialSupply;
-        owner = msg.sender;
+        balances[owner] = _initialSupply;
     }
 
 /*
@@ -23,16 +22,17 @@ contract DonateTokenBank {
     Date: 2024.07.11
     Write by: 심민서
 */
-    function additional_mint(uint256 amount) public returns (bool success) {
-        require(msg.sender == owner, "Caller is not the owner");
+    function additionalMint(uint256 amount) public returns (bool success) {
+        // require(msg.sender == owner, "Caller is not the owner");
         totalSupply += amount;
         return true;
     }
 
 /*
     Function name: transfer
-    Summary: 토큰 전송 함수
-    parameter: 총 2개
+    Summary: 토큰 전송 함수 (remitter => recipient)
+    parameter: 총 3개
+        address remitter; 송신자 주소
         address recipient; 수신자 주소
         uint256 amount; 전송할 토큰량
     Return: 성공 여부 변수
@@ -40,9 +40,12 @@ contract DonateTokenBank {
     Date: 2024.07.11
     Write by: 심민서
 */
-    function transfer(address recipient, uint256 amount) public returns (bool success) {
-        require(balances[msg.sender] >= amount);
-        balances[msg.sender] -= amount;
+    function transfer(address remitter, address recipient, uint256 amount) public returns (bool success) {
+        if (remitter == owner && balances[remitter] < amount) {
+            additionalMint(amount);
+        }
+        require(balances[remitter] >= amount, "Insufficient tokens");
+        balances[remitter] -= amount;
         balances[recipient] += amount;
         return true;
     }
