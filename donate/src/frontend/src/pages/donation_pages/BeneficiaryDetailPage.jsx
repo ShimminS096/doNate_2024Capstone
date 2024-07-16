@@ -1,6 +1,6 @@
 import { useParams, useSearchParams } from "react-router-dom";
 
-const Beneficiary = () => {
+const BeneficiaryDetailPage = () => {
    const params = useParams();
   // const { params, setParams } = useSearchParams();
   // console.log(params.get("value"));
@@ -8,4 +8,4 @@ const Beneficiary = () => {
   return <div>{params.id}번 Beneficiary</div>;
 };
 
-export default Beneficiary;
+export default BeneficiaryDetailPage;

@@ -13,6 +13,7 @@ const Home = () => {
         profileImage={DoNateLogo}
         name={"이름"}
         tags={["태그1", "태그2"]}
+        id={3}
       />
       Home
     </div>
