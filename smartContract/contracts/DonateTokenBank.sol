@@ -6,6 +6,13 @@ contract DonateTokenBank {
     uint256 public _initialSupply = 1000000;
     uint256 public totalSupply; // 토큰 총 발행량
     address public owner = msg.sender;
+    address[] private admin_list = [
+        owner, 
+        0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB, 
+        0x617F2E2fD72FD9D5503197092aC168c91465E7f2, 
+        0x17F6AD8Ef982297579C203069C1DbfFE4348c372
+    ]; // 임시 하드코딩
+
 
     constructor() {
         totalSupply = _initialSupply;
@@ -23,8 +30,9 @@ contract DonateTokenBank {
     Write by: 심민서
 */
     function additionalMint(uint256 amount) public returns (bool success) {
-        // require(msg.sender == owner, "Caller is not the owner");
+        require(msg.sender == owner, "Caller is not the owner");
         totalSupply += amount;
+        balances[owner] += amount;
         return true;
     }
 
@@ -40,13 +48,18 @@ contract DonateTokenBank {
     Date: 2024.07.11
     Write by: 심민서
 */
-    function transfer(address remitter, address recipient, uint256 amount) public returns (bool success) {
+    function transfer(address remitter, address recipient, uint256 amount) public returns (bool success) { 
         if (remitter == owner && balances[remitter] < amount) {
-            additionalMint(amount);
+            totalSupply += amount;
+            balances[owner] += amount;
         }
         require(balances[remitter] >= amount, "Insufficient tokens");
         balances[remitter] -= amount;
         balances[recipient] += amount;
         return true;
+    }
+
+    function getAdminArray() external view returns (address[] memory) {
+        return admin_list;
     }
 }
