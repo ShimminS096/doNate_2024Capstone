@@ -1,5 +1,6 @@
 import BeneficiaryBox from "../components/BeneficiaryBox";
 import DonationSteps from "../components/DonationStepsBar";
+import MyPageMenuBox from "../components/MyPageMenuBox";
 import TagBox from "../components/TagBox";
 import DoNateLogo from "../assets/DoNate_logo.png";
 
@@ -15,6 +16,7 @@ const Home = () => {
         tags={["태그1", "태그2"]}
         id={3}
       />
+      <MyPageMenuBox menuName={"회원정보"} myPageType={"/myprofile"} />
       Home
     </div>
   );
