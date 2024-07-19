@@ -4,6 +4,7 @@ import MyPageMenuBox from "../components/MyPageMenuBox";
 import TagBox from "../components/TagBox";
 import DoNateLogo from "../assets/DoNate_logo.png";
 import PaymentMethod from "../components/PaymentMethod";
+import PaymentReceipt from "../components/PaymentReceipt";
 
 const Home = () => {
   return (
@@ -27,6 +28,10 @@ const Home = () => {
         methodIcon={DoNateLogo}
         methodName={"카드결제"}
         isPaymentMethodSelected={0}
+      />
+      <PaymentReceipt
+        numberOfBeneficiaries={"3"}
+        donationAmountPerPerson={"10000"}
       />
       Home
     </div>
