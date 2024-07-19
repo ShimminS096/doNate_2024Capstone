@@ -3,6 +3,7 @@ import DonationSteps from "../components/DonationStepsBar";
 import MyPageMenuBox from "../components/MyPageMenuBox";
 import TagBox from "../components/TagBox";
 import DoNateLogo from "../assets/DoNate_logo.png";
+import PaymentMethod from "../components/PaymentMethod";
 
 const Home = () => {
   return (
@@ -17,6 +18,16 @@ const Home = () => {
         id={3}
       />
       <MyPageMenuBox menuName={"회원정보"} myPageType={"/myprofile"} />
+      <PaymentMethod
+        methodIcon={DoNateLogo}
+        methodName={"카드결제"}
+        isPaymentMethodSelected={1}
+      />
+      <PaymentMethod
+        methodIcon={DoNateLogo}
+        methodName={"카드결제"}
+        isPaymentMethodSelected={0}
+      />
       Home
     </div>
   );
