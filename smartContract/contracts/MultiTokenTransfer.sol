@@ -7,7 +7,7 @@ contract MultiTokenTransfer {
     DonateTokenBank private donate_token_bank;  // Smart Contract 주소
     address public donate_token_bank_address;   // 토큰을 가진 Donate 계좌 주소
     bool private isInitTransferSuccessful;  // 토큰 전송 성공 여부 (DonateTokenBank => donator)
-    address[] public reverted_list_1 = [0x4B0897b0513fdC7C541B6d9D7E929C4e5364D2dB];  // 토큰 전송 실패 수혜자 리스트 (donator => beneficiary_list)
+    address[] public reverted_list_1;  // 토큰 전송 실패 수혜자 리스트 (donator => beneficiary_list)
     address[] public reverted_list_2;  // 토큰 회수 실패 수혜자 리스트 (beneficiary_list => DonateTokenBank)
     address[] private _admin_list;  // Transfer 권한 가진 주소 리스트
 
@@ -96,7 +96,7 @@ contract MultiTokenTransfer {
     Write by: 심민서
 */
     function sendBatchTokensToDonateBank(address[] memory beneficiary_list, uint256 divided_amount) public {
-        require(msg.sender == donate_token_bank_address, "Caller is not the owner");
+        require(isAdmin(msg.sender), "Caller is not the admin");
         require(beneficiary_list.length != 0, "none of the beneficiaries received the token.");
         for (uint256 i = 0; i < beneficiary_list.length; i++) {
             try donate_token_bank.transfer(beneficiary_list[i], msg.sender, divided_amount) {
@@ -113,7 +113,7 @@ contract MultiTokenTransfer {
     parameter: 총 1개
         address element; 검증할 호출자
     Return: 없음
-    Caller: sendTokensToDonator
+    Caller: sendTokensToDonator, sendBatchTokensToBenificiary, sendBatchTokensToDonateBank
     Date: 2024.07.16
     Write by: 조현지
 */
@@ -146,4 +146,16 @@ contract MultiTokenTransfer {
         }
     }
 
+/*
+    Function name: getRevertedList
+    Summary: 1차(donator => beneficiary_list), 2차(beneficiary_list => DonateBank)에서 revert된 수혜자 리스트 반환 함수
+    parameter: 없음
+    Return: 없음
+    Caller: 없음
+    Date: 2024.07.20
+    Write by: 심민서
+*/
+    function getRevertedList() view public returns (address[] memory, address[] memory) {
+        return (reverted_list_1, reverted_list_2);
+    }
 }
