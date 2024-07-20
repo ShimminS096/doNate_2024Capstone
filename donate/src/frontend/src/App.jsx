@@ -6,7 +6,7 @@ import Signup from "./pages/login_signup_pages/Signup";
 
 import Donation from "./pages/donation_pages/DonationStart";
 import Payment from "./pages/donation_pages/Payment";
-import Done from "./pages/donation_pages/Done";
+import DonationDone from "./pages/donation_pages/DonationDone";
 import BeneficiaryDetailPage from "./pages/donation_pages/BeneficiaryDetailPage";
 
 import Mypage from "./pages/my_pages/Mypage";
