@@ -14,7 +14,6 @@ const MyPageMenuBox = ({ menuName, myPageType }) => {
     <div className="MyPageMenuBox">
       <div className="menuName">{menuName}</div>
       <TransparentButton
-        className="showDetailMy"
         text={`> 상세 페이지`}
         onClick={() => onClickShowDetailMy(myPageType)}
       />

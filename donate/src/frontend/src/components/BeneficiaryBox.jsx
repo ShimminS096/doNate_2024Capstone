@@ -21,7 +21,6 @@ const BeneficiaryBox = ({ profileImage, name, tags, id }) => {
         </div>
       </div>
       <TransparentButton
-        className="detailPageLink"
         text={`> 상세 페이지`}
         onClick={() => onClickBeneficiaryDetailPageLink(id)}
       />
