@@ -1,0 +1,22 @@
+.MyPageMenuBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #878787;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 200px;
+  height: 160px;
+  padding: 20px;
+  background-color: white;
+}
+
+.MyPageMenuBox .menuName {
+  margin-right: auto;
+  align-self: flex-start;
+}
+
+.MyPageMenuBox .TransparentButton {
+  margin-left: auto;
+  align-self: flex-end;
+}
