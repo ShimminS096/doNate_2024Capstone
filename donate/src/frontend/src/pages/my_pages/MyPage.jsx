@@ -1,6 +1,6 @@
 import "./MyPage.css";
 import MyPageMenuBox from "../../components/MyPageMenuBox";
-import DoNateLogo from "../../assets/DoNate_logo.png";
+import DoNateLogo from "../../assets/DoNateLogo.png";
 
 const MyPage = () => {
   return (

@@ -2,7 +2,7 @@ import BeneficiaryBox from "../components/BeneficiaryBox";
 import DonationSteps from "../components/DonationStepsBar";
 import MyPageMenuBox from "../components/MyPageMenuBox";
 import TagBox from "../components/TagBox";
-import DoNateLogo from "../assets/DoNate_logo.png";
+import DoNateLogo from "../assets/DoNateLogo.png";
 import PaymentMethod from "../components/PaymentMethod";
 import PaymentReceipt from "../components/PaymentReceipt";
 

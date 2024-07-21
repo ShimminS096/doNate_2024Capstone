@@ -1,43 +1,41 @@
 .Header {
-  padding: 10px 0px;
+  padding: 15px 0px;
   border-bottom: 1px solid #d9d9d9;
 }
 
-.Header .header_shortcut {
+.Header .headerShortcut {
   display: flex;
-  padding: 8px 0px;
   gap: 8px;
   justify-content: flex-end;
+  font-size: 10px;
 }
 
-.Header .hearder_entire {
+.Header .hearderEntire {
   display: flex;
   align-items: center;
 }
 
-.Header .hearder_entire .header_left {
+.Header .hearderEntire .headerLeft {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: start;
 }
 
-.Header .hearder_entire .header_left .header_DoNate_title {
-  font-size: 45px;
-  color: #fea801;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-}
-
-.Header .hearder_entire .header_left .header_DoNate_logo {
-  width: 80px;
+.Header .hearderEntire .headerLeft img {
   height: 80px;
+  cursor: pointer;
 }
 
-.Header .hearder_entire .header_right {
+.Header .hearderEntire .headerRight {
   width: 20%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.Header .hearderEntire .headerRight .ColoredButton {
+  font-weight: 500;
+  height: 50px;
+  width: 120px;
 }
