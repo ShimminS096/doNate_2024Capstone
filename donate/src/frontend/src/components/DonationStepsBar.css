@@ -3,7 +3,7 @@
   justify-content: center;
 
   gap: 8px;
-  font-size: 20px;
+  font-size: 18px;
   border-bottom: 3px solid #d9d9d9;
   width: 320px;
   padding: 10px 0px;
@@ -15,6 +15,10 @@
 
 .DonationSteps.here .num {
   color: #fea801;
+}
+
+.DonationSteps .num {
+  font-weight: 600;
 }
 
 .DonationStepsBar {

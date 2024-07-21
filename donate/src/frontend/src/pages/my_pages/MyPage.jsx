@@ -1,6 +1,6 @@
 import "./MyPage.css";
 import MyPageMenuBox from "../../components/MyPageMenuBox";
-import DoNateLogo from "../../assets/DoNateLogo.png";
+import profileImage from "../../assets/basicProfile.png";
 
 const MyPage = () => {
   return (
@@ -8,7 +8,7 @@ const MyPage = () => {
       <div className="title">마이페이지</div>
       <div className="MyPageContent">
         <div className="userInfo">
-          <img className={"myProfileImage"} src={DoNateLogo} />
+          <img className={"myProfileImage"} src={profileImage} />
           <div className="name">홍길동</div>
         </div>
 

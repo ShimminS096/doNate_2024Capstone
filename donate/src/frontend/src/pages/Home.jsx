@@ -1,19 +1,49 @@
+import React, { useState } from "react";
 import BeneficiaryBox from "../components/BeneficiaryBox";
 import DonationSteps from "../components/DonationStepsBar";
 import MyPageMenuBox from "../components/MyPageMenuBox";
 import TagBox from "../components/TagBox";
-import DoNateLogo from "../assets/DoNateLogo.png";
 import PaymentMethod from "../components/PaymentMethod";
+import DoNateLogo from "../assets/DoNateLogo.png";
+import profileImage from "../assets/basicProfile.png";
 import PaymentReceipt from "../components/PaymentReceipt";
 
+const tags = ["Tag1", "Tag2", "Tag3"];
+
 const Home = () => {
+  // 상태 관리
+  const [selectedTags, setSelectedTags] = useState(new Set());
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+
+  const handleTagClick = (tagName) => {
+    setSelectedTags((prevSelectedTags) => {
+      const newSelectedTags = new Set(prevSelectedTags);
+      if (newSelectedTags.has(tagName)) {
+        newSelectedTags.delete(tagName);
+      } else {
+        newSelectedTags.add(tagName);
+      }
+      return newSelectedTags;
+    });
+  };
+
+  const handlePaymentMethodClick = (methodName) => {
+    setSelectedPaymentMethod(methodName);
+  };
+
   return (
     <div className="home">
       <DonationSteps />
-      <TagBox tagName={"태그"} isSelected={1} />
-      <TagBox tagName={"태그"} isSelected={0} />
+      {tags.map((tag) => (
+        <TagBox
+          key={tag}
+          tagName={tag}
+          isSelected={selectedTags.has(tag)} // boolean 값으로 전달
+          onTagClick={() => handleTagClick(tag)} // onClick 핸들러 전달
+        />
+      ))}
       <BeneficiaryBox
-        profileImage={DoNateLogo}
+        profileImage={profileImage}
         name={"이름"}
         tags={["태그1", "태그2"]}
         id={3}
@@ -22,12 +52,14 @@ const Home = () => {
       <PaymentMethod
         methodIcon={DoNateLogo}
         methodName={"카드결제"}
-        isPaymentMethodSelected={1}
+        isPaymentMethodSelected={selectedPaymentMethod === "카드결제"} // boolean 값으로 전달
+        onClick={() => handlePaymentMethodClick("카드결제")} // onClick 핸들러 전달
       />
       <PaymentMethod
         methodIcon={DoNateLogo}
-        methodName={"카드결제"}
-        isPaymentMethodSelected={0}
+        methodName={"계좌이체"}
+        isPaymentMethodSelected={selectedPaymentMethod === "계좌이체"} // boolean 값으로 전달
+        onClick={() => handlePaymentMethodClick("계좌이체")} // onClick 핸들러 전달
       />
       <PaymentReceipt
         numberOfBeneficiaries={"3"}

@@ -1,5 +1,5 @@
 const DonationFirstStep = () => {
-    return <div>DonationFirstStep</div>;
-  };
+  return <div>DonationFirstStep</div>;
+};
 
-  export default DonationFirstStep;
+export default DonationFirstStep;
