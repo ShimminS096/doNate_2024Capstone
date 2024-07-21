@@ -12,7 +12,7 @@ const MyPage = () => {
           <div className="name">홍길동</div>
         </div>
 
-        <MyPageMenuBox menuName={"회원정보"} myPageType={"/myprofile"} />
+        <MyPageMenuBox menuName={"회원정보"} myPageType={"/myinfo"} />
         <MyPageMenuBox
           menuName={"나의 관심 수혜자"}
           myPageType={"/myinterest"}

@@ -4,9 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/login_signup_pages/Login";
 import Signup from "./pages/login_signup_pages/Signup";
 
-import Donation from "./pages/donation_pages/DonationStart";
-import Payment from "./pages/donation_pages/Payment";
-import DonationDone from "./pages/donation_pages/DonationDone";
+import DonationFirstStep from "./pages/donation_pages/DonationFirstStep";
 import BeneficiaryDetailPage from "./pages/donation_pages/BeneficiaryDetailPage";
 
 import MyPage from "./pages/my_pages/MyPage";
@@ -27,7 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/donationstart" element={<Donation />} />
+          <Route path="/donation" element={<DonationFirstStep />} />
           <Route
             path="/beneficiarydetailpage/:id"
             element={<BeneficiaryDetailPage />}
