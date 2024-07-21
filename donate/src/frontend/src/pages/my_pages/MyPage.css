@@ -1,14 +1,14 @@
 .MyPage .title {
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 600;
   padding: 50px 0px;
 }
 
 .MyPage img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 1px solid #878787;
+  border: 1px solid #d9d9d9;
 }
 
 .MyPage .userInfo {
@@ -17,10 +17,10 @@
 }
 .MyPage .userInfo .name {
   text-align: center;
-  font-size: 20px;
-  padding-top: 10px;
+  font-size: 18px;
+  padding-top: 5px;
 }
 .MyPage .MyPageContent {
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }

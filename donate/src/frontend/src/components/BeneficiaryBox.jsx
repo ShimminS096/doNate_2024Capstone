@@ -1,15 +1,18 @@
-import "./BeneficiaryBox.css";
 import React from "react";
+import "./BeneficiaryBox.css";
 import TransparentButton from "../components/TransparentButton";
 
 const BeneficiaryBox = ({ profileImage, name, tags, id }) => {
-  const onClickBeneficiaryDetailPageLink = (id) => {
-    window.open(`/beneficiarydetailpage/${id}`, "_blank");
+  const onClickBeneficiaryDetailPageLink = (beneficiaryId) => {
+    window.open(
+      `/beneficiarydetailpage?beneficiaryId=${beneficiaryId}`,
+      "_blank"
+    );
   };
 
   return (
     <div className="BeneficiaryBox">
-      <img className={`profileImage_${name}`} src={profileImage} alt={name} />
+      <img className="profileImage" src={profileImage} alt={name} />
       <div className="beneficiaryBoxText">
         <div className="name">{name}</div>
         <div className="tagList">
@@ -21,7 +24,7 @@ const BeneficiaryBox = ({ profileImage, name, tags, id }) => {
         </div>
       </div>
       <TransparentButton
-        text={`> 상세 페이지`}
+        text="> 상세 페이지"
         onClick={() => onClickBeneficiaryDetailPageLink(id)}
       />
     </div>

@@ -1,10 +1,16 @@
 import "./PaymentMethod.css";
 import React from "react";
 
-const PaymentMethod = ({ methodIcon, methodName, isPaymentMethodSelected }) => {
+const PaymentMethod = ({
+  methodIcon,
+  methodName,
+  isPaymentMethodSelected,
+  onClick,
+}) => {
   return (
     <div
       className={`PaymentMethod ${isPaymentMethodSelected ? "selected" : ""}`}
+      onClick={onClick}
     >
       <img
         className={`methodIcon_${methodName}`}
