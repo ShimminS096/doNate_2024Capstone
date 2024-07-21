@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95e2e874-a603-4947-be85-2823b043c3c0" name="Changes" comment="Refactor, Rename : 파일명 수정 및 새로운 파일 생성&#10;&#10;Before: 240721_17:48" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ShimminS096/doNate_2024Capstone.git&quot;,
+    &quot;accountId&quot;: &quot;32cb846f-447b-46c8-8f4e-bf52a1b22fe9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2j6tazpAcmd4dS4PSQOOvTzlxLI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/GilJeongSu/doNate_2024Capstone/donate/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\GilJeongSu\doNate_2024Capstone\donate\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GilJeongSu\doNate_2024Capstone\donate\src\frontend\src\assets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95e2e874-a603-4947-be85-2823b043c3c0" name="Changes" comment="" />
+      <created>1720719421141</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720719421141</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Init : 프론트 초기 작업 사항 업로드 &#10;&#10;- src/frontend 전체 &#10;&#10;Before: 240712_02:34 &#10;&#10;Note : vscode로 작업했던 프론트엔드 파일들을 Before에 합쳐서 업로드">
+      <option name="closed" value="true" />
+      <created>1720956154861</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720956154861</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Docs: node_modules 폴더, package-lock.json 파일 재설정&#10;&#10;- node_modules 폴더 전체&#10;- package-lock.json&#10;&#10;Before: 240714_20:22">
+      <option name="closed" value="true" />
+      <created>1721098673856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721098673856</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Feat, Design, Rename: BeneficiaryBox 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- App.jsx : 기존에 Beneficiary.jsx라고 저장되어 있던 파일명을 BeneficiaryDetailPage.jsx로 바꾸면서 수정&#10;- BeneficiaryBox.css, BeneficiaryBox.jsx : BeneficiaryBox를 구현 및 디자인&#10;- BeneficiaryDetailPage.jsx : Rename&#10;- Home.jsx : BeneficiaryBox.jsx 구현으로 인한 컴포넌트 호출 수정&#10;&#10;Before: 240716_11:57">
+      <option name="closed" value="true" />
+      <created>1721146779895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721146779895</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Feat, Design: MyPageMenuBox 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- MyPageMenuBox.css, MyPageMenuBox.jsx : MyPageMenuBox 구현 및 디자인&#10;- Home.jsx : MyPageMenuBox.jsx 구현으로 인한 컴포넌트 호출 추가&#10;&#10;Before: 240717_01:19">
+      <option name="closed" value="true" />
+      <created>1721361498827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721361498827</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Feat, Design: PaymentMethod 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- PaymentMethod.css, PaymentMethod.jsx : PaymentMethod 구현 및 디자인&#10;- Home.jsx : PaymentMethod.jsx 구현으로 인한 컴포넌트 호출 추가&#10;&#10;Before: 240719_12:58">
+      <option name="closed" value="true" />
+      <created>1721362701365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721362701365</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Feat, Design: PaymentReceipt 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- PaymentReceipt.css, PaymentReceipt.jsx : PaymentReceipt 구현 및 디자인&#10;- Home.jsx : PaymentReceipt.jsx 구현으로 인한 컴포넌트 호출 추가&#10;&#10;Before: 240719_13:18">
+      <option name="closed" value="true" />
+      <created>1721365269508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721365269508</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Rename: Donation.jsx와 Done.jsx 이름 변경과 그에 따른 수정 사항&#10;&#10;- Donation.jsx : DonationStart.jsx로 파일명, 컴포넌트명 변경&#10;- Done.jsx : DonationDone.jsx로 파일명, 컴포넌트명 변경&#10;- App.jsx : 위의 변경으로 인한 수정사항&#10;&#10;Before: 240719_14:01">
+      <option name="closed" value="true" />
+      <created>1721500756518</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721500756518</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix: App.jsx에 이전의 파일명 수정 사항 미반영&#10;&#10;- App.jsx : 파일명 수정사항 반영&#10;&#10;Before: 240721_03:39">
+      <option name="closed" value="true" />
+      <created>1721501625777</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721501625777</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor, Design : BeneficiaryBox.css, BeneficiaryBox.jsx, ColoredButton.jsx, MyPageMenuBox.css, MyPageMenuBox.jsx, PaymentMethod.css 몇 가지 간단한 수정 사항&#10;&#10;Before: 240721_03:53">
+      <option name="closed" value="true" />
+      <created>1721502749493</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721502749493</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactor, Feat : 파일명 수정 및 MyPage 구현&#10;&#10;- MyInterest.jsx, MyProfile.jsx, MyStatus.jsx : 파일명 변경&#10;- App.jsx : 파일명 변경으로 인한 호출 수정&#10;- MyPage.jsx, MyPage.css : 마이페이지 구현&#10;&#10;Before: 240721_04:12">
+      <option name="closed" value="true" />
+      <created>1721504396462</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721504396462</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor, Rename : Header의 로고, 아이콘 관련 파일명 수정 및 이미지 변경&#10;&#10;Before: 240721_04:39">
+      <option name="closed" value="true" />
+      <created>1721551709045</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1721551709045</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactor, Rename : 파일명 수정 및 새로운 파일 생성&#10;&#10;Before: 240721_17:48">
+      <option name="closed" value="true" />
+      <created>1721557819560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721557819560</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Init : 프론트 초기 작업 사항 업로드&#10;&#10;- src/frontend 전체&#10;&#10;Before: 240712_02:34&#10;&#10;Note : vscode로 작업했던 프론트엔드 파일들을 Before의 인텔리제이에 합쳐서 업로드 합니다" />
+    <MESSAGE value="Init : 프론트 초기 작업 사항 업로드 &#10;&#10;- src/frontend 전체 &#10;&#10;Before: 240712_02:34 &#10;&#10;Note : vscode로 작업했던 프론트엔드 파일들을 Before에 합쳐서 업로드" />
+    <MESSAGE value="Docs: node_modules 폴더, package-lock.json 파일 재설정&#10;&#10;- node_modules 폴더 전체&#10;- package-lock.json&#10;&#10;Before: 240714_20:22" />
+    <MESSAGE value="Feat, Design, Rename: BeneficiaryBox 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- App.jsx : 기존에 Beneficiary.jsx라고 저장되어 있던 파일명을 BeneficiaryDetailPage.jsx로 바꾸면서 수정&#10;- BeneficiaryBox.css, BeneficiaryBox.jsx : BeneficiaryBox를 구현 및 디자인&#10;- BeneficiaryDetailPage.jsx : Rename&#10;- Home.jsx : BeneficiaryBox.jsx 구현으로 인한 컴포넌트 호출 수정&#10;&#10;Before: 240716_11:57" />
+    <MESSAGE value="Feat, Design: MyPageMenuBox 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- MyPageMenuBox.css, MyPageMenuBox.jsx : MyPageMenuBox 구현 및 디자인&#10;- Home.jsx : MyPageMenuBox.jsx 구현으로 인한 컴포넌트 호출 추가&#10;&#10;Before: 240717_01:19" />
+    <MESSAGE value="Feat, Design: PaymentMethod 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- PaymentMethod.css, PaymentMethod.jsx : PaymentMethod 구현 및 디자인&#10;- Home.jsx : PaymentMethod.jsx 구현으로 인한 컴포넌트 호출 추가&#10;&#10;Before: 240719_12:58" />
+    <MESSAGE value="Feat, Design: PaymentReceipt 컴포넌트 구현과 그에 따른 수정 사항&#10;&#10;- PaymentReceipt.css, PaymentReceipt.jsx : PaymentReceipt 구현 및 디자인&#10;- Home.jsx : PaymentReceipt.jsx 구현으로 인한 컴포넌트 호출 추가&#10;&#10;Before: 240719_13:18" />
+    <MESSAGE value="Rename: Donation.jsx와 Done.jsx 이름 변경과 그에 따른 수정 사항&#10;&#10;- Donation.jsx : DonationStart.jsx로 파일명, 컴포넌트명 변경&#10;- Done.jsx : DonationDone.jsx로 파일명, 컴포넌트명 변경&#10;- App.jsx : 위의 변경으로 인한 수정사항&#10;&#10;Before: 240719_14:01" />
+    <MESSAGE value="Fix: App.jsx에 이전의 파일명 수정 사항 미반영&#10;&#10;- App.jsx : 파일명 수정사항 반영&#10;&#10;Before: 240721_03:39" />
+    <MESSAGE value="Refactor, Design : BeneficiaryBox.css, BeneficiaryBox.jsx, ColoredButton.jsx, MyPageMenuBox.css, MyPageMenuBox.jsx, PaymentMethod.css 몇 가지 간단한 수정 사항&#10;&#10;Before: 240721_03:53" />
+    <MESSAGE value="Refactor, Feat : 파일명 수정 및 MyPage 구현&#10;&#10;- MyInterest.jsx, MyProfile.jsx, MyStatus.jsx : 파일명 변경&#10;- App.jsx : 파일명 변경으로 인한 호출 수정&#10;- MyPage.jsx, MyPage.css : 마이페이지 구현&#10;&#10;Before: 240721_04:12" />
+    <MESSAGE value="Refactor, Rename : Header의 로고, 아이콘 관련 파일명 수정 및 이미지 변경&#10;&#10;Before: 240721_04:39" />
+    <MESSAGE value="Refactor, Rename : 파일명 수정 및 새로운 파일 생성&#10;&#10;Before: 240721_17:48" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor, Rename : 파일명 수정 및 새로운 파일 생성&#10;&#10;Before: 240721_17:48" />
+  </component>
+</project>
