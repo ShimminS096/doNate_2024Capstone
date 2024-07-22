@@ -99,7 +99,7 @@ contract MultiTokenTransfer {
         require(isAdmin(msg.sender), "Caller is not the admin");
         require(beneficiary_list.length != 0, "none of the beneficiaries received the token.");
         for (uint256 i = 0; i < beneficiary_list.length; i++) {
-            try donate_token_bank.transfer(beneficiary_list[i], msg.sender, divided_amount) {
+            try donate_token_bank.transfer(beneficiary_list[i], donate_token_bank_address, divided_amount) {
             } catch {
                 reverted_list_2.push(beneficiary_list[i]);
                 remove(beneficiary_list, i);
