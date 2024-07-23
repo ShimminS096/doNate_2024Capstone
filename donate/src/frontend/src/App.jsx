@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import Login from "./pages/login_signup_pages/Login";
 import Signup from "./pages/login_signup_pages/Signup";
 import DonationFirstStep from "./pages/donation_pages/DonationFirstStep";
+import DonationSecondStep from "./pages/donation_pages/DonationSecondStep";
+import DonationThirdStep from "./pages/donation_pages/DonationThirdStep";
+import DonationPayment from "./pages/donation_pages/DonationPayment.jsx";
 import BeneficiaryDetailPage from "./pages/donation_pages/BeneficiaryDetailPage";
 import MyPage from "./pages/my_pages/MyPage";
 import MyInfo from "./pages/my_pages/MyInfo";
@@ -11,26 +14,58 @@ import MyInterest from "./pages/my_pages/MyInterest";
 import MyStatus from "./pages/my_pages/MyStatus";
 import Notfound from "./pages/Notfound";
 import Header from "./layouts/Header";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Header />
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/donation" element={<DonationFirstStep />} />
-          <Route path="/beneficiarydetailpage" element={<BeneficiaryDetailPage />} />
-          <Route path="/mypage" element={<MyPage />} />
-          <Route path="/myinfo" element={<MyInfo />} />
-          <Route path="/myinterest" element={<MyInterest />} />
-          <Route path="/mysatus" element={<MyStatus />} />
+          <Route
+            path="/donation"
+            element={<ProtectedRoute element={<DonationFirstStep />} />}
+          />
+          <Route
+            path="/donation/second"
+            element={<ProtectedRoute element={<DonationSecondStep />} />}
+          />
+          <Route
+            path="/donation/third"
+            element={<ProtectedRoute element={<DonationThirdStep />} />}
+          />
+          <Route
+            path="/donation/payment"
+            element={<ProtectedRoute element={<DonationPayment />} />}
+          />
+          <Route
+            path="/beneficiarydetailpage"
+            element={<ProtectedRoute element={<BeneficiaryDetailPage />} />}
+          />
+          <Route
+            path="/mypage"
+            element={<ProtectedRoute element={<MyPage />} />}
+          />
+          <Route
+            path="/myinfo"
+            element={<ProtectedRoute element={<MyInfo />} />}
+          />
+          <Route
+            path="/myinterest"
+            element={<ProtectedRoute element={<MyInterest />} />}
+          />
+          <Route
+            path="/mystatus"
+            element={<ProtectedRoute element={<MyStatus />} />}
+          />
           <Route path="*" element={<Notfound />} />
         </Routes>
       </div>
-    </>
+    </AuthProvider>
   );
 }
 
