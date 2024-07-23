@@ -9,6 +9,11 @@
   height: 60px;
 }
 
-.ColoredButton_ORANGE {
+.ColoredButton_Orange {
   background-color: #fea801;
+}
+
+.ColoredButton_White {
+  background-color: white;
+  border: 1px solid #fea801;
 }

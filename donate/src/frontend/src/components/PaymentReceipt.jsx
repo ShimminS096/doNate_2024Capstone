@@ -28,7 +28,7 @@ const PaymentReceipt = ({ numberOfBeneficiaries, donationAmountPerPerson }) => {
       <ColoredButton
         text={"결제하기"}
         onClick={onClickPaymentButton}
-        type={"ORANGE"}
+        type={"Orange"}
       />
     </div>
   );

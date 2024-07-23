@@ -9,9 +9,7 @@ const DonationSteps = ({ num, text, isNow }) => {
   );
 };
 
-const DonationStepsBar = () => {
-  const stepNow = 1;
-
+const DonationStepsBar = ({ stepNow }) => {
   return (
     <div className="DonationStepsBar">
       <div className="first">

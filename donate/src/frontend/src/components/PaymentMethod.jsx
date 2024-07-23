@@ -12,11 +12,6 @@ const PaymentMethod = ({
       className={`PaymentMethod ${isPaymentMethodSelected ? "selected" : ""}`}
       onClick={onClick}
     >
-      <img
-        className={`methodIcon_${methodName}`}
-        src={methodIcon}
-        alt={methodName}
-      />
       <div className="methodName">{methodName}</div>
     </div>
   );
