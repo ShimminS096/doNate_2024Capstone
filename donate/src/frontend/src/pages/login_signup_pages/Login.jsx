@@ -6,8 +6,8 @@ import TransparentButton from "../../components/TransparentButton";
 import "./Login.css";
 
 const Login = () => {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
+  const [loginId, setLoginId] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
   const { login } = useAuth(); // AuthContext에서 login 함수를 가져옵니다.
   const nav = useNavigate();
 
@@ -37,14 +37,14 @@ const Login = () => {
       <input
         type="text" // type을 text로 변경합니다.
         placeholder="아이디"
-        value={id}
-        onChange={(e) => setId(e.target.value)}
+        value={loginId}
+        onChange={(e) => setLoginId(e.target.value)}
       />
       <input
         type="password"
         placeholder="비밀번호"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        value={loginPassword}
+        onChange={(e) => setLoginPassword(e.target.value)}
       />
       <ColoredButton text="로그인" type="Orange" onClick={onClickLoginButton} />
 

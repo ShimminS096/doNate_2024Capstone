@@ -7,7 +7,7 @@ const PaymentReceipt = ({ numberOfBeneficiaries, donationAmountPerPerson }) => {
   const nav = useNavigate();
 
   const onClickPaymentButton = () => {
-    nav("/done");
+    nav("/donation/done");
   };
 
   const totalAmount = numberOfBeneficiaries * donationAmountPerPerson;

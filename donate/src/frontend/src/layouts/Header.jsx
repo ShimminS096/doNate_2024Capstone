@@ -14,7 +14,12 @@ const Header = () => {
   };
 
   const onClickHeaderDonationButton = () => {
-    nav("/donation");
+    if (isAuthenticated) {
+      nav("/donation");
+    } else {
+      window.alert("로그인을 먼저 해주세요.");
+      nav("/login");
+    }
   };
 
   const onClickHeaderLoginButton = () => {

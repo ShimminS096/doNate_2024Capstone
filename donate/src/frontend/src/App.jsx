@@ -16,6 +16,7 @@ import Notfound from "./pages/Notfound";
 import Header from "./layouts/Header";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
+import DonationDone from "./pages/donation_pages/DonationDone.jsx";
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
           <Route
             path="/donation/payment"
             element={<ProtectedRoute element={<DonationPayment />} />}
+          />
+          <Route
+            path="/donation/done"
+            element={<ProtectedRoute element={<DonationDone />} />}
           />
           <Route
             path="/beneficiarydetailpage"
