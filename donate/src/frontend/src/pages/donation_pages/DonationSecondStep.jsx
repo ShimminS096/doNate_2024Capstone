@@ -2,6 +2,7 @@ import ColoredButton from "../../components/ColoredButton";
 import DonationStepsBar from "../../components/DonationStepsBar";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./DonationSecondStep.css";
 
 const DonationSecondStep = () => {
   const nav = useNavigate();
@@ -30,31 +31,38 @@ const DonationSecondStep = () => {
   return (
     <div className="DonationSecondStep">
       <DonationStepsBar stepNow={2} />
-      <input
-        type="text"
-        value={personnel}
-        onChange={(e) => setPersonnel(e.target.value)}
-        placeholder="인원 수"
-      />
-      <div>명에게</div>
-      <input
-        type="number"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        placeholder="총 기부 금액"
-      />
-      <div>원을 나눠 기부합니다.</div>
+      <div className="DonationSecondStepText">
+        <input
+          className="personnel"
+          type="number"
+          min="0" // Ensure only non-negative numbers
+          value={personnel}
+          onChange={(e) => setPersonnel(e.target.value)}
+        />
+        <div>명에게</div>
+        <input
+          className="amount"
+          type="number"
+          min="0" // Ensure only non-negative numbers
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+        />
+        <div>원을 나눠 기부합니다.</div>
+      </div>
+      <div className="explanation">
+        {personnel > 0 && amount > 0
+          ? `한 명당 <${formatPerPerson(perPerson)}원>씩 기부됩니다`
+          : "한 명당 ___________원씩 기부됩니다"}
+      </div>
 
-      {personnel && amount && (
-        <div>한 명당 {formatPerPerson(perPerson)}원씩 기부됩니다</div>
-      )}
-
-      <ColoredButton text={"이전"} onClick={onBeforeButtonClicked} />
-      <ColoredButton
-        text={"다음"}
-        type={"Orange"}
-        onClick={onNextButtonClicked}
-      />
+      <div className="pageNavigationButtons">
+        <ColoredButton text={"이전"} onClick={onBeforeButtonClicked} />
+        <ColoredButton
+          text={"다음"}
+          type={"Orange"}
+          onClick={onNextButtonClicked}
+        />
+      </div>
     </div>
   );
 };

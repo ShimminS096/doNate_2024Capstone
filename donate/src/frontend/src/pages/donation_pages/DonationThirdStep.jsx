@@ -4,6 +4,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import BeneficiaryBox from "../../components/BeneficiaryBox";
 import profileImage from "../../assets/basicProfile.png";
+import "./DonationThirdStep.css";
 
 const DonationThirdStep = () => {
   const location = useLocation();
@@ -26,18 +27,52 @@ const DonationThirdStep = () => {
   return (
     <div className="DonationThirdStep">
       <DonationStepsBar stepNow={3} />
-      <BeneficiaryBox
-        profileImage={profileImage}
-        name={"이름"}
-        tags={["태그1", "태그2"]}
-        id={3}
-      />
-      <ColoredButton text={"이전"} onClick={onBeforeButtonClicked} />
-      <ColoredButton
-        text={"다음"}
-        type={"Orange"}
-        onClick={onNextButtonClicked}
-      />
+      <div className="beneficiaryLists">
+        <BeneficiaryBox
+          profileImage={profileImage}
+          name={"이름"}
+          tags={["태그1", "태그2"]}
+          id={3}
+        />
+        <BeneficiaryBox
+          profileImage={profileImage}
+          name={"이름"}
+          tags={["태그1", "태그2"]}
+          id={3}
+        />
+        <BeneficiaryBox
+          profileImage={profileImage}
+          name={"이름"}
+          tags={["태그1", "태그2"]}
+          id={3}
+        />
+        <BeneficiaryBox
+          profileImage={profileImage}
+          name={"이름"}
+          tags={["태그1", "태그2"]}
+          id={3}
+        />
+        <BeneficiaryBox
+          profileImage={profileImage}
+          name={"이름"}
+          tags={["태그1", "태그2"]}
+          id={3}
+        />
+        <BeneficiaryBox
+          profileImage={profileImage}
+          name={"이름"}
+          tags={["태그1", "태그2"]}
+          id={3}
+        />
+      </div>
+      <div className="pageNavigationButtons">
+        <ColoredButton text={"이전"} onClick={onBeforeButtonClicked} />
+        <ColoredButton
+          text={"다음"}
+          type={"Orange"}
+          onClick={onNextButtonClicked}
+        />
+      </div>
     </div>
   );
 };
