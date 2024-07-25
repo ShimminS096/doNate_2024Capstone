@@ -14,7 +14,7 @@ const PaymentReceipt = ({ numberOfBeneficiaries, donationAmountPerPerson }) => {
 
   return (
     <div className="PaymentReceipt">
-      <div className="title">최종 결제 금액</div>
+      <div className="PaymentReceiptTitle">최종 결제 금액</div>
       <div className="infoRow">
         <div className="left">수혜 인원</div>
         <div className="right">{numberOfBeneficiaries} 명</div>
