@@ -49,7 +49,7 @@ function App() {
           />
           <Route
             path="/beneficiarydetailpage"
-            element={<ProtectedRoute element={<BeneficiaryDetailPage />} />}
+            element={<BeneficiaryDetailPage />}
           />
           <Route
             path="/mypage"
