@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.3.1'
 	id 'io.spring.dependency-management' version '1.1.5'
+	id 'org.web3j' version '4.12.0'
 }
 
 group = 'com.hikdonate'
@@ -24,7 +25,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
-	runtimeOnly 'com.h2database:h2'
+	implementation 'com.h2database:h2'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
@@ -34,5 +36,5 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-	
+
 }
