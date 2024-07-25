@@ -4,7 +4,7 @@ import "./TagBox.css";
 const TagBox = ({ tagName, isSelected, onTagClick }) => {
   return (
     <div
-      className={`tagBox ${isSelected ? "selected" : ""}`}
+      className={`TagBox ${isSelected ? "selected" : ""}`}
       onClick={onTagClick}
     >
       {tagName}
